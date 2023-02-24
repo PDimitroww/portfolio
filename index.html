@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="logo/logo.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <!-- <link rel="manifest" href="manifest.webmanifest"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <!-- ICONS PACK -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" media="all" />
+    <link rel="stylesheet" href="queries.css" media="all" />
+    <title>Portfolio Website</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <nav class="nav">
+          <span
+            ><img class="nav--logo" src="logo/web-logo.svg" alt="logo" />
+          </span>
+          <div>
+            <button aria-label="open navigation" class="btn-mobile-nav">
+              <ion-icon name="menu-outline" class="mobile-bars"></ion-icon>
+            </button>
+            <button aria-label="close navigation" class="btn-mobile-nav close">
+              <ion-icon name="close-outline" class="mobile-times"></ion-icon>
+            </button>
+          </div>
+          <ul class="nav_links">
+            <li>
+              <a class="nav_color nav_link" href="#section--0">Home</a>
+            </li>
+            <li>
+              <a class="nav_color nav_link" href="#section--1">About</a>
+            </li>
+            <li>
+              <a class="nav_color nav_link" href="#section--2">Skills</a>
+            </li>
+            <li>
+              <a class="nav_color nav_link" href="#section--3">Qualification</a>
+            </li>
+            <li>
+              <a class="nav_color nav_link" href="#section--4">Portfolio</a>
+            </li>
+            <li>
+              <a class="nav_color nav_link" href="#section--contact-me"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <span class="nav_color light-mode light-dark-btn" id="toggle"
+                ><ion-icon name="moon-outline" class="moon-outline"></ion-icon
+              ></span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="header frame-one" id="section--0">
+      <div class="header__link">
+        <a
+          class="header__links"
+          target="_blank"
+          href="https://www.linkedin.com/in/plamen-dimitrov-6332b5231/"
+          ><ion-icon name="logo-linkedin" class="linkedin"></ion-icon>
+        </a>
+        <a
+          class="header__links"
+          target="_blank"
+          href="https://github.com/PDimitroww"
+          ><ion-icon name="logo-github" class="github"></ion-icon>
+        </a>
+        <a
+          class="header__links"
+          target="_blank"
+          href="https://codepen.io/your-work/"
+          ><ion-icon name="logo-codepen" class="codepen"></ion-icon>
+        </a>
+      </div>
+
+      <div class="header__title">
+        <div class="header-text">
+          <h1 class="header-h1">
+            Hi,
+            <span class="highlight">I'm Plamen</span>
+            <br />
+            <span class="highlight">FrontEnd</span> Developer
+          </h1>
+          <h4>
+            Junior Level experience in web design and development
+            knowledge,producing quality work.
+          </h4>
+          <button class="btn--text btn--scroll-to">
+            <ion-icon name="information-circle-outline" class="info"></ion-icon>
+            <span class="scroll-btn">Scroll down</span>
+            <ion-icon name="arrow-down-outline" class="uil-arrow"></ion-icon>
+          </button>
+        </div>
+        <div class="header-img">
+          <img src="img/author.png" class="header__img" alt="author-img" />
+        </div>
+      </div>
+    </section>
+    <!--================================================================================END OF HEADER SECTION ==================================================-->
+
+    <!--=================================================================== ABOUT ME SECTION =========================================================-->
+
+    <section class="section frame-two mobile" id="section--1">
+      <div class="section__title section__title-right">
+        <h2 class="section__description sec-desc-mob">About me</h2>
+        <h3 class="section__header sec-head-mob">My introduction</h3>
+      </div>
+
+      <div class="about--me">
+        <img src="img/home-4.webp" class="aboutme__img" alt="selfie-img" />
+        <div class="introduction">
+          <p class="resume">
+            Web developer with one year of experience, willing to learn as much
+            as I can and take the wave of web developing and UI/UX design!
+          </p>
+          <div>
+            <span class="bold">1</span>
+            <p class="bold-text">
+              Year of <br />
+              experience
+            </p>
+          </div>
+          <div>
+            <span class="bold">10+</span>
+            <p class="bold-text">
+              Completed <br />
+              projects
+            </p>
+          </div>
+          <div>
+            <span class="bold">0</span>
+            <p class="bold-text">
+              Companies <br />
+              worked at
+            </p>
+          </div>
+
+          <a
+            class="btn--download"
+            download="CV"
+            href="pdf/Пламен-Руменов-Димитров.pdf"
+          >
+            Download CV
+            <ion-icon name="download-outline" class="uil-import"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--================================================================================END OF ABOUTME SECTION ==================================================-->
+
+    <!--=================================================================== SKILLS SECTION =========================================================-->
+    <section class="section frame-skills" id="section--2">
+      <div class="section__title">
+        <h2 class="section__description">Skills</h2>
+        <h3 class="section__header">FrontEnd Development and design!</h3>
+      </div>
+
+      <div class="skills">
+        <div class="skills__tab-container">
+          <button
+            class="btn skills__tab skills__tab--1 skills__tab--active"
+            data-tab="1"
+          >
+            Front End
+          </button>
+          <button class="btn skills__tab skills__tab--2" data-tab="2">
+            Back End
+          </button>
+          <button class="btn skills__tab skills__tab--3" data-tab="3">
+            Design
+          </button>
+        </div>
+
+        <div class="skills__content skills__content--1 skills__content--active">
+          <h3 class="skills-h3">
+            Tools that i use while working on the front end.
+          </h3>
+          <div class="icons-box">
+            <ion-icon name="logo-html5" class="icon-html icons-size"></ion-icon>
+            <img src="svgIcons/JS.svg" alt="svg icon" class="svg-icon-width" />
+            <ion-icon name="logo-css3" class="icon-css icons-size"></ion-icon>
+            <img
+              src="svgIcons/VSC.svg"
+              alt="svg icon"
+              class="svg-icon-width icon-vsc"
+            />
+            <img
+              src="svgIcons/Bootstrap.svg"
+              alt="bootstrap icon"
+              class="svg-icon-width"
+            />
+            <img
+              src="svgIcons/bulma.svg"
+              alt="bulma icon"
+              class="svg-icon-width svg-bulma"
+            />
+          </div>
+        </div>
+
+        <div class="skills__content skills__content--2">
+          <h3 class="skills-h3">
+            Thats my side hustle! Not really good yet but im getting there.
+          </h3>
+          <div class="icons-box">
+            <ion-icon name="logo-nodejs" class="icons-size icon-NJS"></ion-icon>
+            <ion-icon name="logo-npm" class="icons-size icon-NPM"></ion-icon>
+            <img
+              src="svgIcons/mangoDB.svg"
+              alt="mangoDB"
+              class="svg-icon-width"
+            />
+          </div>
+        </div>
+        <div class="skills__content skills__content--3">
+          <h3 class="skills-h3">
+            My Fav tools to work with while designing projects.
+          </h3>
+          <div class="icons-box">
+            <img
+              src="svgIcons/figma.svg"
+              alt="figma icon"
+              class="svg-icon-width"
+            />
+            <img src="svgIcons/PS.svg" alt="PS icon" class="svg-icon-width" />
+            <img
+              src="svgIcons/AdobeXd.svg"
+              alt="adobeXd icon"
+              class="svg-icon-width"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--======================================================== END OF SKILL SECTION   ===================================================-->
+
+    <!--======================================================== QUALIFICATION SECTION  ===================================================-->
+    <section class="section" id="section--3">
+      <div class="section__title section__title--qualification">
+        <h2 class="section__description">Qualification</h2>
+        <h3 class="section__header">My personal journey!</h3>
+      </div>
+
+      <div class="slider">
+        <div class="slide">
+          <div class="qualification">
+            <h5 class="qualification__header">Education</h5>
+            <blockquote class="qualification__text">
+              <ul>
+                <li>Interior Designer</li>
+                <li>
+                  Nikolay Haitov Vocational High School of Forestry and
+                  Woodworking
+                </li>
+                <li><i class="uil uil-calendar-alt"></i> 2010 - 2015</li>
+                <li>Udemy</li>
+                <li><i class="uil uil-calendar-alt"></i> 2022 - present</li>
+              </ul>
+            </blockquote>
+            <address>
+              <p class="qualification__location">
+                <i class="uil uil-map-marker"></i>Varna, Bulgaria
+              </p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="qualification">
+            <h5 class="qualification__header">Work</h5>
+            <blockquote class="qualification__text">
+              <ul>
+                <li>Colorist / Product Representative</li>
+                <li>Telec 2002 - Akzo Nobel Bulgaria</li>
+                <li><i class="uil uil-calendar-alt"></i> 2015 - 2022</li>
+              </ul>
+            </blockquote>
+            <address>
+              <p class="qualification__location">
+                <i class="uil uil-map-marker"></i>Varna, Bulgaria
+              </p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="qualification">
+            <h5 class="qualification__header">Work perspective!</h5>
+            <blockquote class="qualification__text">
+              <p>
+                As someone who is perfectionist, I have to make sure I'm always
+                giving my full effort. While I work fast, I make sure to treat
+                every detail on my products as if they were my own. In doing
+                this, I can ensure that I deliver every task on time and in
+                perfect quality.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--left">
+          <ion-icon
+            name="chevron-back-outline"
+            class="slider-icon-left"
+          ></ion-icon>
+        </button>
+        <button class="slider__btn slider__btn--right">
+          <ion-icon
+            name="chevron-forward-outline"
+            class="slider-icon-right"
+          ></ion-icon>
+        </button>
+        <div class="dots"></div>
+      </div>
+    </section>
+    <!-- ========================================================= END OF QUALIFICATION SECTION ==============================================================-->
+
+    <!--==================================================================== PORTFOLIO SECTION START ========================================================-->
+
+    <section class="section" id="section--4">
+      <h2 class="section__description">Portfolio</h2>
+      <h3 class="section__header">Projects that i've been working on!</h3>
+
+      <!-- box that contains all the projects -->
+      <div class="container cont-mobile">
+        <!-- The first project -->
+        <div class="work-box">
+          <div class="work-img">
+            <img src="img/portfolio.jpg" alt="" class="img-fluid" />
+          </div>
+          <div class="work-content">
+            <div class="row">
+              <div>
+                <h2 class="w-title">Personal Portfolio</h2>
+                <div class="w-more">
+                  <span class="w-category">Html/Css/JS</span>
+                  <span class="w-date">/ 02 Nov. 2022</span>
+                </div>
+              </div>
+              <a
+                ><ion-icon
+                  name="add-circle-outline"
+                  class="uil uil-plus-circle btn--show-info"
+                  data-open="modal1"
+                ></ion-icon>
+              </a>
+              <div class="port--modal" id="modal1">
+                <div class="port--modal--data">
+                  <button class="btn--close-info" data-close>&times;</button>
+                  <div>
+                    <h2>Portfolio Details</h2>
+                    <img src="img/portfolio-1.jpg" alt="" class="img--modal" />
+                  </div>
+                  <div class="project-info">
+                    <h3>Project information</h3>
+                    <ul>
+                      <li><strong>Category</strong>: Web design</li>
+                      <li><strong>Client</strong>: Plamen</li>
+                      <li><strong>Project date</strong>: 02 November, 2022</li>
+                      <li>
+                        <strong>Project URL</strong>:
+                        <a
+                          target="_blank"
+                          href="https://portfolio-pdimitrow.netlify.app"
+                        >
+                          www.portfolio-pdimitrow.com</a
+                        >
+                      </li>
+                    </ul>
+                    <p>
+                      My first big project, and the first one i made on my own!
+                      Had alot of fun while making it. Used some JS, HTML and
+                      CSS.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end of the first project -->
+
+        <!-- project 2-->
+        <div class="work-box">
+          <div class="work-img">
+            <img src="img/portfolio-yuz-1.png" alt="" class="img-fluid" />
+          </div>
+          <div class="work-content">
+            <div class="row">
+              <div>
+                <h2 class="w-title">Clients Portfolio</h2>
+                <div class="w-more">
+                  <span class="w-category">Html/Css/JS</span>
+                  <span class="w-date">/ 12 june. 2022</span>
+                </div>
+              </div>
+              <a>
+                <ion-icon
+                  name="add-circle-outline"
+                  class="uil uil-plus-circle btn--show-info"
+                  data-open="modal6"
+                ></ion-icon
+              ></a>
+              <div class="port--modal" id="modal6">
+                <div class="port--modal--data">
+                  <button class="btn--close-info" data-close>&times;</button>
+                  <div>
+                    <h2>Portfolio Details</h2>
+                    <img
+                      src="img/portfolio-yuz.png"
+                      alt=""
+                      class="img--modal"
+                    />
+                  </div>
+                  <div class="project-info">
+                    <h3>Project information</h3>
+                    <ul>
+                      <li><strong>Category</strong>: Web design</li>
+                      <li><strong>Client</strong>: Yoana Zhelyazkova</li>
+                      <li><strong>Project date</strong>: 28 dec. 2022</li>
+                      <li>
+                        <strong>Project URL</strong>:
+                        <a
+                          target="_blank"
+                          href="https://yuz-portfolio.netlify.app/"
+                        >
+                          www.yuz-portfolio.com</a
+                        >
+                      </li>
+                    </ul>
+                    <p>
+                      My second real and most complete website I've ever made.
+                      It has everything a portfolio might need, it's completly
+                      responsive for smaller laptops, tablets and phones!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of project 2 -->
+
+        <!-- project 3 -->
+        <div class="work-box">
+          <div class="work-img">
+            <img src="img/photography.jpg" alt="" class="img-fluid" />
+          </div>
+          <div class="work-content">
+            <div class="row">
+              <div>
+                <h2 class="w-title">Photography App</h2>
+                <div class="w-more">
+                  <span class="w-category">Bootstrap</span>
+                  <span class="w-date">/ 16 Feb. 2023</span>
+                </div>
+              </div>
+              <a>
+                <ion-icon
+                  name="add-circle-outline"
+                  class="uil uil-plus-circle btn--show-info"
+                  data-open="modal7"
+                ></ion-icon
+              ></a>
+              <div class="port--modal" id="modal7">
+                <div class="port--modal--data">
+                  <button class="btn--close-info" data-close>&times;</button>
+                  <div>
+                    <h2>Project Details</h2>
+                    <img
+                      src="img/photography-1.jpg"
+                      alt=""
+                      class="img--modal"
+                    />
+                  </div>
+                  <div class="project-info">
+                    <h3>Project information</h3>
+                    <ul>
+                      <li><strong>Category</strong>: Web design</li>
+                      <li><strong>Client</strong>: Plamen</li>
+                      <li><strong>Project date</strong>: 16 February, 2023</li>
+                      <li>
+                        <strong>Project URL</strong>:
+                        <a
+                          target="_blank"
+                          href="https://photogr-pd.netlify.app/"
+                        >
+                          www.photogr-pd.com</a
+                        >
+                      </li>
+                    </ul>
+                    <p>
+                      Web page about photography company made with bootstrap. It
+                      has carousels and its own gallery.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of project 3 -->
+
+        <!-- project 4 -->
+        <div class="work-box">
+          <div class="work-img">
+            <img src="img/location.jpg" alt="" class="img-fluid" />
+          </div>
+          <div class="work-content">
+            <div class="row">
+              <div>
+                <h2 class="w-title">Location Generator</h2>
+                <div class="w-more">
+                  <span class="w-category">API/JS</span>
+                  <span class="w-date">/ 01 Sep. 2022</span>
+                </div>
+              </div>
+              <a>
+                <ion-icon
+                  name="add-circle-outline"
+                  class="uil uil-plus-circle btn--show-info"
+                  data-open="modal4"
+                ></ion-icon
+              ></a>
+              <div class="port--modal" id="modal4">
+                <div class="port--modal--data">
+                  <button class="btn--close-info" data-close>&times;</button>
+                  <div>
+                    <h2>Portfolio Details</h2>
+                    <img src="img/location-1.jpg" alt="" class="img--modal" />
+                  </div>
+                  <div class="project-info">
+                    <h3>Project information</h3>
+                    <ul>
+                      <li><strong>Category</strong>: rest API</li>
+                      <li><strong>Client</strong>: Plamen</li>
+                      <li><strong>Project date</strong>: 01 Sep. 2022</li>
+                      <li>
+                        <strong>Project URL</strong>:
+                        <a
+                          target="_blank"
+                          href="https://rest-countries-gen.netlify.app/"
+                        >
+                          www.rest-countries-gen.com</a
+                        >
+                      </li>
+                    </ul>
+                    <p>
+                      Website that marks your location on click! You can also
+                      search different countries around the world and see nice
+                      info about each one of them!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of project 4 -->
+
+        <!-- project 5 -->
+        <div class="work-box">
+          <div class="work-img">
+            <img src="img/bankist.jpg" alt="" class="img-fluid" />
+          </div>
+          <div class="work-content">
+            <div class="row">
+              <div>
+                <h2 class="w-title">Bankist App</h2>
+                <div class="w-more">
+                  <span class="w-category">Html/Css/JS</span>
+                  <span class="w-date">/ 18 Sep. 2022</span>
+                </div>
+              </div>
+              <a>
+                <ion-icon
+                  name="add-circle-outline"
+                  class="uil uil-plus-circle btn--show-info"
+                  data-open="modal5"
+                ></ion-icon
+              ></a>
+              <div class="port--modal" id="modal5">
+                <div class="port--modal--data">
+                  <button class="btn--close-info" data-close>&times;</button>
+                  <div>
+                    <h2>Portfolio Details</h2>
+                    <img src="img/bankist-1.jpg" alt="" class="img--modal" />
+                  </div>
+                  <div class="project-info">
+                    <h3>Project information</h3>
+                    <ul>
+                      <li><strong>Category</strong>: Web design</li>
+                      <li><strong>Client</strong>: Plamen</li>
+                      <li><strong>Project date</strong>: 18 Sep. 2022</li>
+                      <li>
+                        <strong>Project URL</strong>:
+                        <a href="#">www.example.com</a>
+                      </li>
+                    </ul>
+                    <p>
+                      Bankist app that lets you transfer "money" between
+                      accounts and request loans!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of project 5 -->
+
+        <!-- project 6 -->
+        <div class="work-box">
+          <div class="work-img">
+            <img src="img/mapty.jpg" alt="" class="img-fluid" />
+          </div>
+          <div class="work-content">
+            <div class="row">
+              <div>
+                <h2 class="w-title">Mapty</h2>
+                <div class="w-more">
+                  <span class="w-category">Html/Css/JS</span>
+                  <span class="w-date">/ 15 june. 2022</span>
+                </div>
+              </div>
+              <a>
+                <ion-icon
+                  name="add-circle-outline"
+                  class="uil uil-plus-circle btn--show-info"
+                  data-open="modal2"
+                ></ion-icon
+              ></a>
+              <div class="port--modal" id="modal2">
+                <div class="port--modal--data">
+                  <button class="btn--close-info" data-close>&times;</button>
+                  <div>
+                    <h2>Portfolio Details</h2>
+                    <img src="img/mapty-1.jpg" alt="" class="img--modal" />
+                  </div>
+                  <div class="project-info">
+                    <h3>Project information</h3>
+                    <ul>
+                      <li><strong>Category</strong>: Web design</li>
+                      <li><strong>Client</strong>: Practice</li>
+                      <li><strong>Project date</strong>: 15 june, 2022</li>
+                      <li>
+                        <strong>Project URL</strong>:
+                        <a href="#">www.example.com</a>
+                      </li>
+                    </ul>
+                    <p>
+                      App that calculates your workout and saves your marks!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of project 6 -->
+
+        <!-- project 7 -->
+        <div class="work-box">
+          <div class="work-img">
+            <img src="img/forkify.jpg" alt="" class="img-fluid" />
+          </div>
+          <div class="work-content">
+            <div class="row">
+              <div>
+                <h2 class="w-title">Forkify</h2>
+                <div class="w-more">
+                  <span class="w-category">Html/Css/JS</span>
+                  <span class="w-date">/ 13 july. 2022</span>
+                </div>
+              </div>
+              <a>
+                <ion-icon
+                  name="add-circle-outline"
+                  class="uil uil-plus-circle btn--show-info"
+                  data-open="modal3"
+                ></ion-icon
+              ></a>
+              <div class="port--modal" id="modal3">
+                <div class="port--modal--data">
+                  <button class="btn--close-info" data-close>&times;</button>
+                  <div>
+                    <h2>Portfolio Details</h2>
+                    <img src="img/forkify-2.jpg" alt="" class="img--modal" />
+                  </div>
+                  <div class="project-info">
+                    <h3>Project information</h3>
+                    <ul>
+                      <li><strong>Category</strong>: Web design</li>
+                      <li><strong>Client</strong>: Plamen</li>
+                      <li><strong>Project date</strong>: 13 july. 2022</li>
+                      <li>
+                        <strong>Project URL</strong>:
+                        <a
+                          target="_blank"
+                          href="https://forkify-pdimitrow.netlify.app"
+                        >
+                          www.forkify-pdimitroww.com</a
+                        >
+                      </li>
+                    </ul>
+                    <p>
+                      Website that contains delicious recipes! With working
+                      bookmarks and way to add your own recipes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end of project 7 -->
+
+        <!-- project 8 -->
+        <div class="work-box">
+          <div class="work-img">
+            <img src="img/omnifood.jpg" alt="" class="img-fluid" />
+          </div>
+          <div class="work-content">
+            <div class="row">
+              <div>
+                <h2 class="w-title">Omnifood</h2>
+                <div class="w-more">
+                  <span class="w-category">Html/Css</span>
+                  <span class="w-date">/ 19 Nov. 2022</span>
+                </div>
+              </div>
+              <a>
+                <ion-icon
+                  name="add-circle-outline"
+                  class="uil uil-plus-circle btn--show-info"
+                  data-open="modal8"
+                ></ion-icon
+              ></a>
+              <div class="port--modal" id="modal8">
+                <div class="port--modal--data">
+                  <button class="btn--close-info" data-close>&times;</button>
+                  <div>
+                    <h2>Portfolio Details</h2>
+                    <img src="img/omnifood-1.jpg" alt="" class="img--modal" />
+                  </div>
+                  <div class="project-info">
+                    <h3>Project information</h3>
+                    <ul>
+                      <li><strong>Category</strong>: Web design</li>
+                      <li><strong>Client</strong>: Plamen</li>
+                      <li><strong>Project date</strong>: 19 November, 2022</li>
+                      <li>
+                        <strong>Project URL</strong>:
+                        <a
+                          target="_blank"
+                          href="https://omnifood-pd.netlify.app"
+                        >
+                          www.omnifood-pd.com</a
+                        >
+                      </li>
+                    </ul>
+                    <p>App about food.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of project 8 -->
+    </section>
+    <!------------------------------------------------------------------- End Portfolio Section----- ------------------------------------->
+
+    <section class="section" id="section--contact-me">
+      <div class="section__title">
+        <h3 class="section__header">
+          I'ts never too late to make your own personal website!
+        </h3>
+      </div>
+      <button class="btn btn--show-modal">Let's get in touch!</button>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" href="#">About</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Privacy Policy</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Careers</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Blog</a>
+        </li>
+      </ul>
+      <p class="footer__copyright">
+        &copy; Copyright by
+        <a class="footer__link linkedIn-link" target="_blank" href="#"
+          >Plamen Dimitrow</a
+        >. Use for learning or your portfolio. Don't claim as your own product.
+      </p>
+    </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Got a
+        <span class="highlight">question?</span><br />I would love to hear it.
+      </h2>
+      <ion-icon
+        name="mail-open-outline"
+        class="uil uil-envelope-open"
+      ></ion-icon>
+      <div id="contact-form">
+        <form id="contact" name="contact" netlify>
+          <label for="First"><p>First name</p></label>
+          <input name="name" id="First" type="text" placeholder="First" />
+          <label for="Last"><p>Last name</p></label>
+          <input name="name" id="Last" type="text" placeholder="Last" />
+          <label for="Email"><p>Email</p></label>
+          <input name="email" id="Email" type="email" placeholder="Email" />
+          <label for="Text"><p>Message</p></label>
+          <textarea
+            name="message"
+            id="Text"
+            placeholder="Your Message"
+          ></textarea>
+          <button type="submit" value="Send" name="submit" class="btn--send">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <a href="#" class="back-to-top"
+      ><ion-icon
+        name="arrow-up-circle-outline"
+        class="uil uil-arrow-circle-up"
+      ></ion-icon
+    ></a>
+    <div class="overlay hidden"></div>
+    <div class="port--overlay hidden"></div>
+  </body>
+</html>
