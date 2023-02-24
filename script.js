@@ -15,6 +15,7 @@ const sectionHeader = document.getElementById('section--0');
 const sectionSkills = document.getElementById('section--2');
 const lists = document.querySelectorAll('.nav_color');
 const lightMode = document.querySelector('body');
+const aboutPng = document.querySelector('.aboutme__img');
 //Mobile Navigation
 const navBar = document.querySelector('.nav_links');
 const btnNav = document.querySelector('.btn-mobile-nav');
@@ -59,10 +60,13 @@ toggle.addEventListener('click', () => {
 //Getting the Desktop backgrounds
 let imgsHeader = ['frames/Frame-header-dark.png', 'frames/Frame-header.png'];
 let imgsAbout = ['frames/Frame-about-dark.png', 'frames/Frame-about.png'];
+let imgsAboutMain = ['img/about-dark.png', 'img/about.png'];
 let imgsSkills = ['frames/Skills_dark.png', 'frames/Skills.png'];
 
+//each letter represents the first letter of a section h-header a-about etc!
 let h = 0;
 let a = 0;
+let iam = 0;
 let s = 0;
 
 //Getting the mobile backgrounds
@@ -76,12 +80,17 @@ let imgsAboutMob = [
 ];
 let imgsSkillsMob = ['frames/Skills-mob-dark.png', 'frames/Skills-mobile.png'];
 
+//each letter represents the first letter of a section h-header a-about etc!
 let hm = 0;
 let am = 0;
 let sm = 0;
 
 const darkMode = () => {
   lightMode.classList.toggle('dark-mode');
+
+  aboutPng.src = imgsAboutMain[h];
+
+  iam = (iam + 1) % imgsAboutMain.length;
 
   if (window.innerWidth >= 544) {
     sectionHeader.style.backgroundImage = 'url(' + imgsHeader[h] + ')';

@@ -12,7 +12,7 @@
   /* Linear colors */
   --gradient-primary: linear-gradient(to top left, #3da77e, #b4ff04);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
-  --gradient-dark: linear-gradient(to top left, #0086f3c9, #d400ff);
+  --gradient-dark: linear-gradient(to top left, #0086f3b0, #d400ff);
   /* skills */
   --gradient-frontend: linear-gradient(to right, #00e038, #00d68f);
   --gradient-backend: linear-gradient(to right, #ff3c00, #ffbe5c);
@@ -161,7 +161,7 @@ h4 {
 }
 
 .dark-mode .btn--send:hover {
-  background-color: #710094;
+  background-color: #c300ff;
 }
 
 .dark-mode .qualification::before,
@@ -223,7 +223,7 @@ h4 {
 }
 
 .dark-mode .aboutme__img {
-  box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.192);
+  box-shadow: 0 0 2rem 0 rgba(255, 255, 255, 0.041);
 }
 
 .dark-mode .nav.sticky {
@@ -495,7 +495,7 @@ img {
 
 .aboutme__img {
   max-width: 50rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   margin-left: 12rem;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.075);
 }
@@ -1187,6 +1187,7 @@ textarea {
   background-image: var(--gradient-primary);
   color: #333;
   cursor: pointer;
+  border: none;
 }
 
 .btn--send:hover {
