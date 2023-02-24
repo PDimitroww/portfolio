@@ -644,6 +644,10 @@
     top: 11rem;
   }
 
+  .btn--send {
+    width: 35rem;
+  }
+
   .modal {
     max-width: 40rem;
     height: 75vh;
