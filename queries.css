@@ -9,9 +9,17 @@
     gap: 2rem;
   }
 
+  .frame-one {
+    background-position: bottom;
+  }
+
+  .frame-two {
+    background-position: top;
+  }
+
   .frame-one,
   .frame-two {
-    background-size: 1350px;
+    background-size: 135rem;
     background-repeat: no-repeat;
   }
 
@@ -59,12 +67,7 @@
   .frame-one,
   .frame-two {
     background-size: 120rem;
-    background-position: bottom;
     background-repeat: no-repeat;
-  }
-
-  .frame-two {
-    background-position: top;
   }
 
   .header__title {
@@ -84,7 +87,7 @@
     line-height: 1.4;
   }
 
-  .btn--download {
+  .btn-container {
     grid-column: 1 / span 2;
   }
 
@@ -172,10 +175,17 @@
     font-size: 1.6rem;
   }
 
-  .btn--download {
+  .btn-container {
     grid-column: 2;
-    justify-self: center;
+    width: 100%;
+  }
+
+  .btn--download {
     width: 100% !important;
+  }
+
+  .uil-import {
+    right: 8rem;
   }
 
   .port--modal {
@@ -273,6 +283,14 @@
 
   .btn--text {
     font-size: 1.6rem;
+  }
+
+  .btn--download {
+    width: 100% !important;
+  }
+
+  .uil-import {
+    right: 3.5rem;
   }
 
   .section__description {
@@ -463,8 +481,13 @@
     margin: 0;
   }
 
-  .btn--download {
+  .btn-container {
     grid-column: 1 / span 3;
+    width: 90%;
+  }
+
+  .uil-import {
+    right: 13rem;
   }
 
   .aboutme__img {
@@ -636,10 +659,6 @@
     width: 100%;
   }
 
-  .btn--sumbit {
-    width: 35rem;
-  }
-
   .footer__nav li {
     margin: 0 2rem 0 2rem;
   }
@@ -654,5 +673,11 @@
 
   .footer__nav li {
     margin: 0 0 0 2rem;
+  }
+}
+
+@media (max-width: 22.5em) {
+  .uil-import {
+    right: 11rem;
   }
 }
