@@ -500,23 +500,38 @@ btnToTop.addEventListener('click', scrollToTop);
 
 //=================================== VISITORS COUNTER FUNCTIONALITY ===============================//
 
-const counterContainer = document.querySelector('.website-counter');
-// let resetButton = document.querySelector("#reset");
-let visitCount = localStorage.getItem('page_view');
+const KEY = `0ff02be6-b779-11ed-afa1-0242ac120002`;
+const NAMESPACE = 'devppratik.github.io';
+const COUNT_URL = `https://api.countapi.xyz`;
 
-// Check if page_view entry is present
-if (visitCount) {
-  visitCount = +visitCount + 1;
-  localStorage.setItem('page_view', visitCount);
+const counter = document.querySelectorAll('.counter__value');
+
+const getCount = async () => {
+  const response = await fetch(`${COUNT_URL}/get/${NAMESPACE}/${KEY}`);
+  const data = await response.json();
+  setValue(data.value);
+};
+
+const incrementCount = async () => {
+  const response = await fetch(`${COUNT_URL}/hit/${NAMESPACE}/${KEY}`);
+  const data = await response.json();
+  setValue(data.value);
+};
+
+const setValue = num => {
+  var str = num.toString().padStart(6, '0');
+  for (let index = 0; index < str.length; index++) {
+    const element = str[index];
+    counter[index].innerHTML = element;
+  }
+};
+
+if (localStorage.getItem('hasVisited') == null) {
+  incrementCount()
+    .then(() => {
+      localStorage.setItem('hasVisited', 'true');
+    })
+    .catch(err => console.log(err));
 } else {
-  visitCount = 1;
-  localStorage.setItem('page_view', 1);
+  getCount().catch(err => console.log(err));
 }
-counterContainer.innerHTML = visitCount;
-
-// Adding onClick event listener
-// resetButton.addEventListener("click", () => {
-//   visitCount = 1;
-//   localStorage.setItem("page_view", 1);
-//   counterContainer.innerHTML = visitCount;
-// });
