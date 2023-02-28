@@ -501,7 +501,7 @@ btnToTop.addEventListener('click', scrollToTop);
 //=================================== VISITORS COUNTER FUNCTIONALITY ===============================//
 
 const KEY = `0ff02be6-b779-11ed-afa1-0242ac120002`;
-const NAMESPACE = 'devppratik.github.io';
+const NAMESPACE = 'new-portfolio-pd.netlify.app';
 const COUNT_URL = `https://api.countapi.xyz`;
 
 const counter = document.querySelectorAll('.counter__value');
