@@ -1059,6 +1059,44 @@ img {
   font-size: 1.4rem;
 }
 
+/* VISITORS COUNTER */
+
+.counter__container {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  color: rgb(255, 0, 0);
+  font-size: 1.5rem;
+}
+
+.website-counter {
+  text-align: center;
+  background-color: var(--color-primary);
+  height: 2.5rem;
+  width: 5rem;
+  color: white;
+  border-radius: 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+/* Styles for reset button */
+/* #reset {
+  margin-top: 2rem;
+  background-color: #008cba;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: .8rem 2rem;
+  color: white;
+  border: 0;
+  display:inline-block;
+} */
+
 /*CONTACT MODAL WINDOW */
 .modal {
   position: fixed;
