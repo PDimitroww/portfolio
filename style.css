@@ -104,7 +104,8 @@ h4 {
 }
 
 .dark-mode .dots__dot--active,
-.dark-mode .slider__btn {
+.dark-mode .slider__btn,
+.dark-mode .counter__value {
   background-color: #9902c7;
 }
 
