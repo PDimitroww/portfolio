@@ -93,6 +93,11 @@
 
   .port--modal {
     width: 100rem;
+    height: 59rem;
+  }
+
+  .port--modal_footer {
+    height: 15rem;
   }
 
   .container {
@@ -189,7 +194,15 @@
   }
 
   .port--modal {
-    width: 100rem;
+    height: 82rem;
+  }
+
+  .port--modal_footer {
+    height: 10rem;
+  }
+
+  .footer-portfolio {
+    font-size: 3rem;
   }
 
   .port--modal--data {
@@ -213,6 +226,7 @@
 
   .port--modal--data h2 {
     text-align: center;
+    margin-left: 0;
   }
 
   .project-info {
@@ -299,6 +313,24 @@
 
   .section__header {
     font-size: 2rem;
+  }
+
+  .port--modal {
+    width: 75rem;
+  }
+
+  .port--modal_footer {
+    margin-top: 2.6rem;
+  }
+
+  .footer-portfolio {
+    font-size: 3rem;
+  }
+
+  .project-info ul,
+  .project-info h3 {
+    width: 25rem;
+    margin-left: 2rem;
   }
 
   p {
@@ -578,13 +610,26 @@
   .port--modal {
     width: 50rem;
     padding: 1rem 3rem;
-    height: 75rem;
+    padding-bottom: 0;
+    height: 71rem;
     overflow-y: auto;
+  }
+
+  .port--modal_footer {
+    max-width: 100%;
+    left: 0;
+    height: 5rem;
+    margin-top: 3.2rem;
+  }
+
+  .footer-portfolio {
+    font-size: 2rem;
   }
 
   .project-info ul,
   .project-info h3 {
     padding: 1rem;
+    margin-left: 0;
   }
 
   .port--modal--data {
@@ -601,7 +646,9 @@
   }
 
   .img--modal {
-    height: 20rem;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
   }
 
   .project-info {
@@ -663,8 +710,8 @@
     width: 100%;
   }
 
-  .footer__nav li {
-    margin: 0 2rem 0 2rem;
+  .footer__item:not(:last-child) {
+    margin-right: 2rem;
   }
 }
 
@@ -672,11 +719,7 @@
 
 @media (max-width: 27em) {
   .port--modal {
-    width: 40rem;
-  }
-
-  .footer__nav li {
-    margin: 0 0 0 2rem;
+    width: 43rem;
   }
 }
 

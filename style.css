@@ -232,6 +232,10 @@ h4 {
   border-bottom: 0.1px solid #ce2eff;
 }
 
+.dark-mode .port--modal_footer {
+  background-color: rgba(223, 117, 255, 0.336);
+}
+
 /* =================== */
 
 .linkedin,
@@ -922,6 +926,25 @@ img {
   visibility: hidden;
   opacity: 0;
   border-radius: 1rem;
+  overflow: hidden;
+}
+
+.port--modal_footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+  background-color: rgb(209, 255, 213);
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.footer-portfolio {
+  color: #444;
+  font-size: 4rem;
+  text-transform: uppercase;
 }
 
 .port--modal.is-visible {
@@ -966,13 +989,11 @@ img {
   margin-bottom: 1rem;
   color: #19171f;
   font-size: 3.2rem;
-  text-decoration: underline;
-  text-decoration-color: #176145;
   margin: 2rem 0 0 2rem;
 }
 
 .img--modal {
-  max-width: 90%;
+  max-width: 95%;
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.075);
   margin-left: 2rem;
@@ -982,9 +1003,6 @@ img {
   color: #19171f;
   font-size: 1.8rem;
   margin-top: 6rem;
-  text-decoration: underline;
-  text-decoration-color: #176145;
-  text-decoration-thickness: 3px;
 }
 
 .port--modal--data p {
