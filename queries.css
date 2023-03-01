@@ -91,6 +91,11 @@
     grid-column: 1 / span 2;
   }
 
+  .container-images {
+    height: 50rem;
+    max-width: 75%;
+  }
+
   .port--modal {
     width: 100rem;
     height: 59rem;
@@ -309,6 +314,10 @@
 
   .section__description {
     font-size: 4.5rem;
+  }
+
+  .container-images {
+    max-width: 70%;
   }
 
   .section__header {
@@ -603,6 +612,18 @@
 
   .dots {
     bottom: 20%;
+  }
+
+  .container-images {
+    height: 20rem;
+    max-width: 90%;
+    margin-bottom: 10rem;
+  }
+
+  .container-images::after {
+    bottom: -25rem;
+    right: -3rem;
+    font-size: 15rem;
   }
 
   /* Portfolio */
