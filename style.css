@@ -242,10 +242,6 @@ h4 {
   background-color: rgba(223, 117, 255, 0.336);
 }
 
-.dark-mode .text,
-.dark-mode .numbertext {
-}
-
 /* =================== */
 
 .linkedin,
@@ -852,14 +848,14 @@ img {
   height: 50rem;
   position: relative;
   margin: 0 auto;
-  max-width: 40%;
+  max-width: 50%;
   margin-top: 5rem;
 }
 
 .container-images::after {
   content: '\201D';
   position: absolute;
-  bottom: -14rem;
+  bottom: -24rem;
   right: -7rem;
   line-height: 1;
   font-size: 20rem;
@@ -870,6 +866,7 @@ img {
 
 .img-1 {
   max-width: 100%;
+  border-radius: 1rem;
 }
 
 .mySlides {
