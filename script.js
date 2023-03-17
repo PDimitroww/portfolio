@@ -26,7 +26,7 @@ const element = document.querySelector('.mobile-times');
 const activeLink = function (li) {
   lists.forEach(item => item.classList.remove('active', 'color_dark'));
   li.classList.add('active');
-  console.log(li);
+  // console.log(li);
 };
 
 lists.forEach(item =>
@@ -416,39 +416,6 @@ arrowRight.addEventListener('click', function () {
 
 startSlide();
 
-//===================================================== Portfolio Modal window ====================================//
-const openEls = document.querySelectorAll('[data-open]');
-const closeEls = document.querySelectorAll('[data-close]');
-const overlayPortfolio = document.querySelector('.port--overlay');
-const isVisible = 'is-visible';
-
-for (const el of openEls) {
-  el.addEventListener('click', function () {
-    const modalId = this.dataset.open;
-    document.getElementById(modalId).classList.add(isVisible);
-    overlayPortfolio.classList.remove('hidden');
-  });
-}
-
-for (const el of closeEls) {
-  el.addEventListener('click', function () {
-    this.parentElement.parentElement.classList.remove(isVisible);
-    overlayPortfolio.classList.add('hidden');
-  });
-}
-
-document.addEventListener('keydown', e => {
-  // if we press the ESC
-  if (e.key == 'Escape' && document.querySelector('.port--modal.is-visible')) {
-    //getting rid of the modal
-    document
-      .querySelector('.port--modal.is-visible')
-      .classList.remove(isVisible);
-    //getting rid of the overlay
-    overlayPortfolio.classList.add('hidden');
-  }
-});
-
 //=============================================== CONTACT ME Modal window========================//
 
 const openModal = function (e) {
@@ -587,3 +554,239 @@ if (localStorage.getItem('hasVisited') == null) {
 } else {
   getCount().catch(err => console.log(err));
 }
+
+//=================================== PORTFOLIO PROJECTS ===============================//
+
+const projects = document.querySelector('.container');
+
+const data = [
+  {
+    id: 1,
+    img: './img/portfolio.jpg',
+    title: 'Personal Portfolio',
+    category: 'Html/Css/JS/Figma',
+    date: '02 Nov. 2022',
+    imgMod: './img/portfolio-1.jpg',
+    categoryMod: 'Web design',
+    client: 'Plamen',
+    dateMod: '02 November, 2022',
+    link: 'www.portfolio-pdimitrow.com',
+    text: `My first big project, and the first one i made on my own!
+    Had alot of fun while making it. Used some JS, HTML and
+    CSS. However i made a lot of changes and decided to leave it just as a showcase of how much i advanced since then.`,
+    footer: 'all rights reserved &copy;',
+    href: 'https://portfolio-pdimitrow.netlify.app',
+  },
+  {
+    id: 2,
+    img: './img/portfolio-yuz-1.png',
+    title: 'Clients Portfolio',
+    category: 'Html/Css/JS',
+    date: '28 dec. 2022',
+    imgMod: './img/portfolio-yuz.png',
+    categoryMod: 'Web design',
+    client: 'Yoana Zhelyazkova',
+    dateMod: '28 dec. 2022',
+    link: 'www.yuz-portfolio.com',
+    text: `My second real and most complete website I've ever made.
+    It has everything a portfolio might need, it's completely
+    responsive for smaller laptops, tablets and phones!`,
+    footer: 'all rights reserved &copy;',
+    href: 'https://yuz-portfolio.netlify.app',
+  },
+  {
+    id: 3,
+    img: './img/photography.jpg',
+    title: 'Photography App',
+    category: 'Bootstrap',
+    date: '16 Feb. 2023',
+    imgMod: './img/photography-1.jpg',
+    categoryMod: 'Web design',
+    client: 'Plamen',
+    dateMod: '16 February, 2023',
+    link: 'www.photogr-pd.com',
+    text: `Web page about photography company made with bootstrap. It
+    has carousels and its own gallery.`,
+    footer: 'all rights reserved &copy;',
+    href: 'https://photogr-pd.netlify.app',
+  },
+  {
+    id: 4,
+    img: './img/location.jpg',
+    title: 'Location Generator',
+    category: 'API/JS',
+    date: '01 Sep. 2022',
+    imgMod: './img/location-1.jpg',
+    categoryMod: 'rest API',
+    client: 'Plamen',
+    dateMod: '01 Sep. 2022',
+    link: 'www.rest-countries-gen.com',
+    text: `Website that marks your location on click! You can also
+    search different countries around the world and see nice
+    info about each one of them!`,
+    footer: 'all rights reserved &copy;',
+    href: 'https://rest-countries-gen.netlify.app',
+  },
+  {
+    id: 5,
+    img: './img/bankist.jpg',
+    title: 'Bankist App',
+    category: 'Html/Css/JS',
+    date: '18 Sep. 2022',
+    imgMod: './img/bankist-1.jpg',
+    categoryMod: 'Web design',
+    client: 'Plamen',
+    dateMod: '18 Sep. 2022',
+    link: 'www.example.com',
+    text: `Bankist app that lets you transfer "money" between
+    accounts and request loans!`,
+    footer: 'all rights reserved &copy;',
+    href: '#',
+  },
+  {
+    id: 6,
+    img: './img/mapty.jpg',
+    title: 'Mapty',
+    category: 'Html/Css/JS',
+    date: '15 june. 2022',
+    imgMod: './img/mapty-1.jpg',
+    categoryMod: 'Web design',
+    client: 'Plamen',
+    dateMod: '15 June, 2022',
+    link: 'www.example.com',
+    text: `App that calculates your workout and saves your marks!`,
+    footer: 'all rights reserved &copy;',
+    href: '#',
+  },
+  {
+    id: 7,
+    img: './img/forkify.jpg',
+    title: 'Forkify',
+    category: 'Html/Css/JS',
+    date: '13 july. 2022',
+    imgMod: './img/forkify-2.jpg',
+    categoryMod: 'Web design',
+    client: 'Plamen',
+    dateMod: '13 july. 2022',
+    link: 'www.forkify-pdimitroww.com',
+    text: `Website that contains delicious recipes! With working
+    bookmarks and way to add your own recipes.`,
+    footer: 'all rights reserved &copy;',
+    href: 'https://forkify-pdimitrow.netlify.app',
+  },
+  {
+    id: 8,
+    img: './img/omnifood.jpg',
+    title: 'Omnifood',
+    category: 'Html/Css',
+    date: '19 Nov. 2022',
+    imgMod: './img/omnifood-1.jpg',
+    categoryMod: 'Web design',
+    client: 'Plamen',
+    dateMod: '19 November, 2022',
+    link: 'www.omnifood-pd.com',
+    text: `App about food.`,
+    footer: 'all rights reserved &copy;',
+    href: 'https://omnifood-pd.netlify.app',
+  },
+];
+
+data.forEach(data => {
+  const renderProject = () => {
+    const html = `
+    <div class="work-box">
+    <div class="work-img">
+      <img src="${data.img}" alt="" class="img-fluid" />
+    </div>
+    <div class="work-content">
+      <div class="row">
+        <div>
+          <h2 class="w-title">${data.title}</h2>
+          <div class="w-more">
+            <span class="w-category">${data.category}</span>
+            <span class="w-date">/ ${data.date}</span>
+          </div>
+        </div>
+        <a>
+          <ion-icon
+            name="add-circle-outline"
+            class="uil uil-plus-circle btn--show-info"
+            data-open="${data.id}"
+          ></ion-icon
+        ></a>
+        <div class="port--modal" id="${data.id}">
+          <div class="port--modal--data">
+            <button class="btn--close-info" data-close>&times;</button>
+            <div>
+              <h2>Portfolio Details</h2>
+              <img src="${data.imgMod}" alt="" class="img--modal" />
+            </div>
+            <div class="project-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: ${data.categoryMod}</li>
+                <li><strong>Client</strong>: ${data.client}</li>
+                <li><strong>Project date</strong>: ${data.dateMod}</li>
+                <li>
+                  <strong>Project URL</strong>:
+                  <a
+                    target="_blank"
+                    href="${data.href}"
+                  >
+                  ${data.link}</a
+                  >
+                </li>
+              </ul>
+              <p>
+              ${data.text}
+              </p>
+            </div>
+          </div>
+          <div class="port--modal_footer">
+            <p class="footer-portfolio">${data.footer}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
+
+    projects.insertAdjacentHTML('beforeend', html);
+  };
+  renderProject();
+});
+
+// How to set the parameters of my function to point to object ?
+
+//===================================================== Portfolio Modal window ====================================//
+const openEls = document.querySelectorAll('[data-open]');
+const closeEls = document.querySelectorAll('[data-close]');
+const overlayPortfolio = document.querySelector('.port--overlay');
+const isVisible = 'is-visible';
+
+for (const el of openEls) {
+  el.addEventListener('click', function () {
+    const modalId = this.dataset.open;
+    document.getElementById(modalId).classList.add(isVisible);
+    overlayPortfolio.classList.remove('hidden');
+  });
+}
+
+for (const el of closeEls) {
+  el.addEventListener('click', function () {
+    this.parentElement.parentElement.classList.remove(isVisible);
+    overlayPortfolio.classList.add('hidden');
+  });
+}
+
+document.addEventListener('keydown', e => {
+  // if we press the ESC
+  if (e.key == 'Escape' && document.querySelector('.port--modal.is-visible')) {
+    //getting rid of the modal
+    document
+      .querySelector('.port--modal.is-visible')
+      .classList.remove(isVisible);
+    //getting rid of the overlay
+    overlayPortfolio.classList.add('hidden');
+  }
+});
