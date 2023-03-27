@@ -332,6 +332,10 @@ h4 {
   transition: all 0.3s;
 }
 
+.btn--text:hover {
+  transform: scale(1.1);
+}
+
 .scroll-btn {
   margin: 0 0.5rem;
 }
@@ -451,6 +455,8 @@ img {
   align-content: center;
   column-gap: 12rem;
   transition: all 0.5s;
+  position: absolute;
+  top: 34rem;
 }
 
 .header-text {
@@ -458,20 +464,61 @@ img {
   flex-direction: column;
   row-gap: 3rem;
   align-items: flex-start;
+  animation: MoveInLeft 1s;
 }
 
 .header-text h1 {
   transition: all 0.5s ease;
 }
 
-.header__img {
-  max-width: 100%;
-  transform: translateY(-8rem);
-  border-radius: 5rem 40rem 15rem 5rem;
-}
-
 .header-h1:hover {
   transform: translate3d(0, -10px, 22px);
+}
+
+@keyframes MoveInLeft {
+  /* START */
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  /* Finish */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.header-img {
+  position: relative;
+}
+
+.header__img {
+  max-width: 100%;
+  /* transform: translateY(-8rem); */
+  top: -8rem;
+  position: absolute;
+  border-radius: 5rem 40rem 15rem 5rem;
+  animation: MoveInRight 1s;
+}
+
+@keyframes MoveInRight {
+  /* START */
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+    /* transform:  */
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  /* Finish */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 .highlight {
