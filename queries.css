@@ -601,7 +601,16 @@
   }
 
   .skills__tab {
-    width: 13rem;
+    width: 11rem;
+  }
+
+  .skills__backend-mob {
+    justify-self: center;
+    width: 35rem;
+  }
+
+  .icons-box {
+    width: 40rem;
   }
 
   .icons-size {
@@ -617,7 +626,7 @@
   }
 
   .skills-h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .svg-bulma {
@@ -689,7 +698,7 @@
     width: 50rem;
     padding: 1rem 3rem;
     padding-bottom: 0;
-    height: 71rem;
+    height: 75rem;
     overflow-y: auto;
   }
 
@@ -765,8 +774,8 @@
 
   .uil-envelope-open {
     font-size: 10rem;
-    right: 2rem;
-    top: 11rem;
+    right: 3.5rem;
+    top: 19rem;
   }
 
   .btn--send {
