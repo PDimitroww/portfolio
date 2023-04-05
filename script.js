@@ -439,7 +439,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-//================================Contactme Modal Window input functionality=========================//
+//================================Contact me Modal Window input functionality=========================//
 
 const form = $('#contact'),
   submit = form.find('[name="submit"]');
@@ -519,20 +519,26 @@ btnToTop.addEventListener('click', scrollToTop);
 
 //=================================== VISITORS COUNTER FUNCTIONALITY ===============================//
 
-const KEY = `0ff02be6-b779-11ed-afa1-0242ac120002`;
-const NAMESPACE = 'new-portfolio-pd.netlify.app';
-const COUNT_URL = `https://api.countapi.xyz`;
+const API_KEY = '0ff02be6-b779-11ed-afa1-0242ac120002';
+const API_NAMESPACE = 'new-portfolio-pd.netlify.app';
+const API_COUNT_URL = 'https://api.countapi.xyz';
 
 const counter = document.querySelectorAll('.counter__value');
 
 const getCount = async () => {
-  const response = await fetch(`${COUNT_URL}/get/${NAMESPACE}/${KEY}`);
+  const response = await fetch(
+    `${API_COUNT_URL}/get/${API_NAMESPACE}/${API_KEY}`
+  );
   const data = await response.json();
   setValue(data.value);
 };
 
+console.log(API_COUNT_URL);
+
 const incrementCount = async () => {
-  const response = await fetch(`${COUNT_URL}/hit/${NAMESPACE}/${KEY}`);
+  const response = await fetch(
+    `${API_COUNT_URL}/hit/${API_NAMESPACE}/${API_KEY}`
+  );
   const data = await response.json();
   setValue(data.value);
 };
