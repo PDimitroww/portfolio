@@ -763,7 +763,7 @@ const closeEls = document.querySelectorAll('[data-close]');
 const overlayPortfolio = document.querySelector('.port--overlay');
 const isVisible = 'is-visible';
 
-for (const el of openEls) {
+for (let el of openEls) {
   el.addEventListener('click', function () {
     const modalId = this.dataset.open;
     document.getElementById(modalId).classList.add(isVisible);
@@ -771,21 +771,27 @@ for (const el of openEls) {
   });
 }
 
-for (const el of closeEls) {
+for (let el of closeEls) {
   el.addEventListener('click', function () {
     this.parentElement.parentElement.classList.remove(isVisible);
     overlayPortfolio.classList.add('hidden');
   });
 }
 
+const hideProjects = () => {
+  //getting rid of the modal
+  document.querySelector('.port--modal.is-visible').classList.remove(isVisible);
+  //getting rid of the overlay
+  overlayPortfolio.classList.add('hidden');
+};
+
 document.addEventListener('keydown', e => {
   // if we press the ESC
   if (e.key == 'Escape' && document.querySelector('.port--modal.is-visible')) {
-    //getting rid of the modal
-    document
-      .querySelector('.port--modal.is-visible')
-      .classList.remove(isVisible);
-    //getting rid of the overlay
-    overlayPortfolio.classList.add('hidden');
+    hideProjects();
   }
+});
+
+overlayPortfolio.addEventListener('click', () => {
+  hideProjects();
 });
