@@ -1017,6 +1017,12 @@ img {
   transform: translateY(0);
 }
 
+.proj__modal-btn {
+  display: inline-block;
+  background: none;
+  border: none;
+}
+
 .row {
   display: grid;
   grid-template-columns: 7fr 1fr;

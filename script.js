@@ -712,16 +712,16 @@ data.forEach(data => {
             <span class="w-date">/ ${data.date}</span>
           </div>
         </div>
-        <a>
+        <button class="proj__modal-btn" aria-label="Projects Modal button">
           <ion-icon
             name="add-circle-outline"
             class="uil uil-plus-circle btn--show-info"
             data-open="${data.id}"
           ></ion-icon
-        ></a>
+        ></button>
         <div class="port--modal" id="${data.id}">
           <div class="port--modal--data">
-            <button class="btn--close-info" data-close>&times;</button>
+            <button class="btn--close-info" data-close aria-label="close projects button">&times;</button>
             <div>
               <h2>Portfolio Details</h2>
               <img src="${data.imgMod}" alt="" class="img--modal" />
