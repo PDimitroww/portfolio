@@ -43,6 +43,7 @@ body {
   background-color: rgb(243, 255, 244);
   max-width: 100%;
   overflow-x: hidden;
+  cursor: url('/logo/cursor.png') 12 14, auto;
   transition: all 0.5s;
 }
 
@@ -68,7 +69,6 @@ h4 {
 }
 
 /* DARK MODE */
-
 .dm-b-c.dm-b-c {
   color: #fff;
 }
@@ -77,6 +77,7 @@ h4 {
 .dark-mode .port--modal {
   background-color: rgb(15, 15, 15);
   transition: all 0.5s;
+  cursor: url('/logo/cursor-dark.png') 12 14, auto;
 }
 
 .dark-mode #section--contact-me,
