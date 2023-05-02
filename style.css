@@ -43,7 +43,7 @@ body {
   background-color: rgb(243, 255, 244);
   max-width: 100%;
   overflow-x: hidden;
-  cursor: url('/logo/cursor.png') 12 14, auto;
+  cursor: none;
   transition: all 0.5s;
 }
 
@@ -56,6 +56,10 @@ h1 {
 h4 {
   font-size: 2.4rem;
   font-weight: 500;
+}
+
+::selection {
+  background: rgba(180, 255, 4, 0.568);
 }
 
 .moon-outline {
@@ -73,11 +77,14 @@ h4 {
   color: #fff;
 }
 
+.dark-mode ::selection {
+  background: rgba(113, 0, 148, 0.479);
+}
+
 .dark-mode,
 .dark-mode .port--modal {
   background-color: rgb(15, 15, 15);
   transition: all 0.5s;
-  cursor: url('/logo/cursor-dark.png') 12 14, auto;
 }
 
 .dark-mode #section--contact-me,
@@ -1389,4 +1396,57 @@ textarea {
   bottom: 1rem;
   right: 2rem;
   color: #0078ff;
+}
+
+/* CURSOR */
+
+.cursor {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.cursor::after,
+.cursor::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--gradient-primary);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 5rem;
+}
+
+.cursor::before {
+  background-color: #333;
+}
+
+.cursor.click::before {
+  animation: click 0.5s ease forwards;
+  background-color: #333;
+}
+
+@keyframes click {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(7);
+  }
+}
+
+/* Dark mode cursor */
+
+.dark-mode .cursor::after,
+.dark-mode .cursor::before {
+  background: var(--gradient-design);
 }
