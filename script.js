@@ -770,10 +770,10 @@ const getCount = async () => {
   const response = await fetch(
     `${API_COUNT_URL}/get/${API_NAMESPACE}/${API_KEY}`,
     {
-      method: 'GET',
-      withCredentials: true,
-      crossorigin: true,
-      mode: 'no-cors',
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
     }
   );
   const data = await response.json();
@@ -784,10 +784,10 @@ const incrementCount = async () => {
   const response = await fetch(
     `${API_COUNT_URL}/hit/${API_NAMESPACE}/${API_KEY}`,
     {
-      method: 'HIT',
-      withCredentials: true,
-      crossorigin: true,
-      mode: 'no-cors',
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
     }
   );
   const data = await response.json();
