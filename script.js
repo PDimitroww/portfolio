@@ -770,9 +770,12 @@ const getCount = async () => {
   const response = await fetch(
     `${API_COUNT_URL}/get/${API_NAMESPACE}/${API_KEY}`,
     {
-      mode: 'cors',
+      statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods':
+          ' GET, POST, PATCH, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
       },
     }
   );
@@ -784,9 +787,12 @@ const incrementCount = async () => {
   const response = await fetch(
     `${API_COUNT_URL}/hit/${API_NAMESPACE}/${API_KEY}`,
     {
-      mode: 'cors',
+      statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods':
+          ' GET, POST, PATCH, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
       },
     }
   );
