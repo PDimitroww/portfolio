@@ -1052,6 +1052,7 @@ img {
   opacity: 0;
   border-radius: 1rem;
   overflow: hidden;
+  cursor: default;
 }
 
 .port--modal_footer {
@@ -1241,6 +1242,7 @@ img {
   z-index: 1000;
   transition: all 0.5s;
   border-radius: 1rem;
+  cursor: default;
 }
 
 .btn--show-modal {
@@ -1401,16 +1403,21 @@ textarea {
 /* CURSOR */
 
 .cursor {
-  z-index: 100;
+  z-index: 1000;
   position: absolute;
   top: 0;
   left: 0;
-  height: 30px;
-  width: 30px;
-  border-radius: 50px;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 5rem;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
+
+.hover {
+  transform: scale(6);
+}
+
 .cursor::after,
 .cursor::before {
   content: '';

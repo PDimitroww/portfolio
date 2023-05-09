@@ -768,7 +768,13 @@ const counter = document.querySelectorAll('.counter__value');
 
 const getCount = async () => {
   const response = await fetch(
-    `${API_COUNT_URL}/get/${API_NAMESPACE}/${API_KEY}`
+    `${API_COUNT_URL}/get/${API_NAMESPACE}/${API_KEY}`,
+    {
+      method: 'GET',
+      withCredentials: true,
+      crossorigin: true,
+      mode: 'no-cors',
+    }
   );
   const data = await response.json();
   setValue(data.value);
@@ -776,14 +782,20 @@ const getCount = async () => {
 
 const incrementCount = async () => {
   const response = await fetch(
-    `${API_COUNT_URL}/hit/${API_NAMESPACE}/${API_KEY}`
+    `${API_COUNT_URL}/hit/${API_NAMESPACE}/${API_KEY}`,
+    {
+      method: 'HIT',
+      withCredentials: true,
+      crossorigin: true,
+      mode: 'no-cors',
+    }
   );
   const data = await response.json();
   setValue(data.value);
 };
 
 const setValue = num => {
-  var str = num.toString().padStart(6, '0');
+  let str = num.toString().padStart(6, '0');
   for (let index = 0; index < str.length; index++) {
     const element = str[index];
     counter[index].innerHTML = element;
@@ -803,18 +815,24 @@ if (localStorage.getItem('hasVisited') == null) {
 /***************** CURSOR **********************/
 
 const cursor = document.querySelector('.cursor');
+const link = document.querySelectorAll('a');
+const list = document.querySelectorAll('li');
 
-window.addEventListener('mousemove', e => {
+const cursorVisibility = e => {
   cursor.style.left = e.pageX + 'px';
   cursor.style.top = e.pageY + 'px';
   cursor.setAttribute('data-fromTop', cursor.offsetTop - scrollY);
   // console.log(e);
-});
+};
+
+window.addEventListener('mousemove', cursorVisibility);
+
 window.addEventListener('scroll', () => {
   const fromTop = cursor.getAttribute('data-fromTop');
   cursor.style.top = scrollY + parseInt(fromTop) + 'px';
   // console.log(scrollY);
 });
+
 window.addEventListener('click', () => {
   if (cursor.classList.contains('click')) {
     cursor.classList.remove('click');
@@ -822,5 +840,16 @@ window.addEventListener('click', () => {
     cursor.classList.add('click');
   } else {
     cursor.classList.add('click');
+  }
+});
+
+window.addEventListener('mouseover', e => {
+  const target = e.target;
+  if (target === link) {
+    cursor.classList.add('hover');
+  } else if (target === list) {
+    cursor.classList.add('hover');
+  } else {
+    cursor.classList.remove('hover');
   }
 });

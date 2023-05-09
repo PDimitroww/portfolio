@@ -70,6 +70,12 @@
 /* Below 1200px (Landscape Tablets)*/
 
 @media (max-width: 75em) {
+  .cursor {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+
   .frame-one,
   .frame-two {
     background-size: 120rem;
