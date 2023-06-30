@@ -1379,6 +1379,9 @@ textarea {
   line-height: 1.5;
 }
 
+#contact-form span {
+  display: block;
+}
 /* BACK TO TOP BTN */
 .back-to-top {
   visibility: hidden;
